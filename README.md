@@ -59,3 +59,8 @@ GROUP BY h.habitat_id, h.habitat_name;
 
 SELECT COUNT(animal_id), species FROM animals
 GROUP BY species;
+
+-- Left Join
+
+SELECT a.animal_id, a.animal_name, a.species, h.habitat_name, h.climate FROM animals a 
+LEFT JOIN habitats h ON a.habitat_id = h.habitat_id;
